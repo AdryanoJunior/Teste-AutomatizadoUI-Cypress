@@ -21,6 +21,12 @@ describe('Funcionalidade: Cadastro', () => {
 
     });
 
+it.only('Deve completar o cadastro com sucesso - Usando variáveis', () => {
+    Cypress.preCadastro(faker.internet.email(), 'Adryano78$', faker.person.firstName(), faker.person.lastName() )
+
+
+});
+
     it('Deve completar o cadastro com sucesso - Usando variáveis', () => {
         var nome = faker.person.firstName()
         var email = faker.internet.email(nome)
@@ -39,3 +45,4 @@ describe('Funcionalidade: Cadastro', () => {
     });
 
 });
+

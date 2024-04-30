@@ -54,5 +54,11 @@ cy.fixture('perfil').then( dados => {
 
 });
 
+it.only('Deve fazer login com sucesso - Usando Comandos Customizados', () => {
+   cy.login('adryanoqaenginner@gmail.com', 'Junior78$' )
+   cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain' , 'Olá, adryanoqaenginner (não é adryanoqaenginner? Sair)' )
+
+});
+
 })
     
